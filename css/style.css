@@ -1,0 +1,247 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+header, footer {
+    background-color: #333;
+    text-align: center;
+    padding: 1rem 0;
+    color: #fff;
+}
+
+footer {
+    padding: 0.5rem;
+    margin: 0;
+}
+
+footer p {
+    margin: 0;
+
+}
+
+header h1, footer h2 {
+    color: #fff;
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    overflow: auto;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+#taskForm {
+    margin-bottom: 20px;
+}
+
+#taskForm input, #taskForm select, #taskForm textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+#taskForm button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#taskForm button:hover {
+    background-color: #4cae4c;
+}
+
+#tasks {
+    margin-top: 20px;
+}
+
+.task {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid #ddd; /* Couleur par défaut pour la bordure gauche */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding-bottom: 50px;
+}
+
+.task h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.task h3 span {
+    font-weight: normal;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.task p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+.task.high {
+    border-left-color: #d9534f;
+}
+
+.task.medium {
+    border-left-color: #f0ad4e;
+}
+
+.task.low {
+    border-left-color: #5bc0de;
+}
+
+.task button {
+    float: right;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.task button:hover {
+    background-color: #c9302c;
+}
+
+#task-filter {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#filterForm {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    align-items: center;
+}
+
+#filterForm label {
+    margin-right: 10px;
+}
+
+#filterForm select, #filterForm input {
+    display: block;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#applyFilter {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#applyFilter:hover {
+    background-color: #0056b3;
+}
+
+#task-search {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#searchContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+    margin: auto;
+}
+
+#searchInput {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#searchButton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#searchButton:hover {
+    background-color: #0056b3;
+}
+
+.edit-btn {
+    background-color: #4CAF50 !important; /* Green */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-btn:hover {
+    background-color: #45a049;
+  }
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    width: 100%;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.tags span {
+    background-color: #f4f4f4;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #333;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
